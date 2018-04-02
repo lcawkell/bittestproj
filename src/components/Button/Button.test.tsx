@@ -1,5 +1,11 @@
 import * as React from 'react';
 import {HTMLAttributes, shallow, ShallowWrapper} from 'enzyme';
+const Enzyme = require('enzyme');
+const EnzymeAdapter = require('enzyme-adapter-react-16');
+
+// Setup enzyme's react adapter
+Enzyme.configure({ adapter: new EnzymeAdapter() });
+
 
 import Button from './Button';
 
@@ -14,25 +20,25 @@ beforeEach(()=>
 );
 
 describe("Button", () => {
-it("Should render without error", ()=>{
-    expect(control.length).toBe(1);
-});
+    it("Should render without error", ()=>{
+        expect(control.length).toBe(1);
+    });
 
-it("Should render as a single button control", ()=>{
-    expect(control.find('button').length).toBe(1);
-});
+    it("Should render as a single button control", ()=>{
+        expect(control.find('button').length).toBe(1);
+    });
 
-it("Should show the passed text", ()=>{
-    expect(control.find('button').text().length).toBe(buttonText.length);
-});
+    it("Should show the passed text", ()=>{
+        expect(control.find('button').text().length).toBe(buttonText.length);
+    });
 
-it("Should call a function on click", ()=>{
-    control.find('button').simulate('click');
-    expect(myMock.mock.calls.length).toBe(1);
-});
+    it("Should call a function on click", ()=>{
+        control.find('button').simulate('click');
+        expect(myMock.mock.calls.length).toBe(1);
+    });
 
-it("Should be clickable more than once", ()=>{
-    control.find('button').simulate('click');
-    expect(myMock.mock.calls.length).toBe(2);
-});
+    it("Should be clickable more than once", ()=>{
+        control.find('button').simulate('click');
+        expect(myMock.mock.calls.length).toBe(2);
+    });
 });
