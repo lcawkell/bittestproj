@@ -9,7 +9,8 @@
     git clone git@github.com:lcawkell/bittestproj.git
     cd bittestproj
     ```
-3. import bit envs
+3. bit init
+4. import bit envs
   * bit i -e 
-4. build - bit build
-5. test - bit test
+5. build - bit build
+6. test - bit test
