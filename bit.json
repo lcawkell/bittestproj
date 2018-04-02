@@ -1,7 +1,7 @@
 {
     "env": {
         "compiler": "bit.envs/compilers/react-typescript@0.0.5",
-        "tester": "bit.envs/testers/jest@0.0.27"
+        "tester": "bit.envs/testers/jest@0.0.29"
     },
     "dependencies": {},
     "componentsDefaultDirectory": "components/{namespace}/{name}",
