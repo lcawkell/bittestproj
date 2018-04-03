@@ -1,5 +1,10 @@
 import * as React from 'react';
 
+/**
+ * @name Button
+ * @description Awsome Button
+ */
+
 interface ButtonProps {
     onClick?: () => void,
     styles?: IButtonStyles,
