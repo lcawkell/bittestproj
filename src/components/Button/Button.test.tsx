@@ -1,13 +1,14 @@
 import * as React from 'react';
 import {HTMLAttributes, shallow, ShallowWrapper} from 'enzyme';
-const Enzyme = require('enzyme');
-const EnzymeAdapter = require('enzyme-adapter-react-16');
+import * as enzyme from "enzyme"
+import * as Adapter from "enzyme-adapter-react-16"
+import Button from './Button';
+import reactDom from 'react-dom';
 
 // Setup enzyme's react adapter
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+enzyme.configure({adapter: new Adapter()})
 
 
-import Button from './Button';
 
 let control:ShallowWrapper<undefined, undefined>;
 let myMock = jest.fn();
