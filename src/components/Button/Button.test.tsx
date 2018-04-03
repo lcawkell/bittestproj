@@ -3,6 +3,7 @@ import {HTMLAttributes, shallow, ShallowWrapper} from 'enzyme';
 import * as enzyme from "enzyme"
 import * as Adapter from "enzyme-adapter-react-16"
 import Button from './Button';
+import reactDom from 'react-dom';
 
 // Setup enzyme's react adapter
 enzyme.configure({adapter: new Adapter()})
